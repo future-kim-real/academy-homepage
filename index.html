@@ -9,51 +9,43 @@
     body {
       margin: 0;
       font-family: "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
-      background: #f7f8fc;
+      background: #f6f8fc;
       color: #222;
       line-height: 1.6;
     }
     a { text-decoration: none; color: inherit; }
     .container {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
       padding: 16px;
     }
     .hero {
       background: linear-gradient(135deg, #4f46e5, #7c3aed);
       color: white;
-      padding: 40px 24px;
+      padding: 36px 24px;
       border-radius: 24px;
-      box-shadow: 0 12px 30px rgba(79, 70, 229, 0.22);
+      box-shadow: 0 12px 28px rgba(79, 70, 229, 0.22);
       margin-top: 12px;
     }
     .hero h1 {
       margin: 0 0 10px;
       font-size: 2rem;
     }
-    .hero p {
-      margin: 0 0 20px;
-      opacity: 0.95;
-    }
-    .hero-buttons {
-      display: flex;
+    .hero p { margin: 0; opacity: 0.95; }
+    .nav {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
-      flex-wrap: wrap;
+      margin-top: 16px;
     }
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-    }
-    .btn-primary {
+    .nav a {
       background: white;
-      color: #4f46e5;
-    }
-    .btn-secondary {
-      background: rgba(255,255,255,0.16);
-      color: white;
-      border: 1px solid rgba(255,255,255,0.3);
+      padding: 14px 12px;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+      border: 1px solid #eceef7;
     }
     .section {
       margin-top: 18px;
@@ -62,40 +54,24 @@
       padding: 22px;
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
     }
-    .section h2 {
-      margin: 0 0 14px;
-      font-size: 1.25rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .card {
-      background: #f8f9ff;
-      border: 1px solid #e6e8ff;
+    .section h2 { margin: 0 0 14px; font-size: 1.25rem; }
+    .board-list { display: grid; gap: 12px; }
+    .post {
+      background: #fafbff;
+      border: 1px solid #e8ebff;
       border-radius: 16px;
       padding: 16px;
     }
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-    }
-    .notice {
-      border-left: 4px solid #4f46e5;
-      padding-left: 12px;
-      margin-bottom: 14px;
-    }
-    .notice strong { display: block; margin-bottom: 4px; }
-    .info-list {
-      display: grid;
-      gap: 10px;
-    }
-    .info-item {
-      background: #fafafa;
-      border-radius: 14px;
-      padding: 14px;
-      border: 1px solid #eee;
+    .post .meta { font-size: 0.9rem; color: #666; margin-bottom: 6px; }
+    .post strong { display: block; font-size: 1rem; margin-bottom: 4px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      background: #4f46e5;
+      color: white;
+      margin-top: 8px;
     }
     .footer {
       text-align: center;
@@ -103,107 +79,84 @@
       padding: 24px 12px 40px;
       font-size: 0.95rem;
     }
+    code {
+      display: block;
+      background: #111827;
+      color: #f9fafb;
+      padding: 14px;
+      border-radius: 14px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
     @media (max-width: 640px) {
       .hero h1 { font-size: 1.7rem; }
-      .grid { grid-template-columns: 1fr; }
+      .nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <section class="hero">
-      <h1>영어학원</h1>
-      <p>학생들이 편하게 들어와 공지 확인하고, 반별 안내를 보고, 질문까지 남길 수 있는 모바일 홈페이지입니다.</p>
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="#classes">반 안내 보기</a>
-        <a class="btn btn-secondary" href="#contact">문의하기</a>
-      </div>
+      <h1>우리학원 영어교실</h1>
+      <p>메뉴를 누르면 각 게시판 페이지로 이동하는 무료 학원 홈페이지입니다.</p>
     </section>
+
+    <nav class="nav">
+      <a href="notice.html">공지사항</a>
+      <a href="middle.html">중등부 게시판</a>
+      <a href="high.html">고등부 게시판</a>
+      <a href="question.html">질문하기</a>
+      <a href="files.html">자료실</a>
+      <a href="contact.html">학원정보</a>
+    </nav>
 
     <section class="section">
-      <h2>학원 소개</h2>
-      <p>
-        우리학원 영어교실은 학생 한 명 한 명의 독해력, 문법 정확성, 내신 대비 실력을 함께 키우는 수업을 지향합니다.
-        학교 시험과 수능형 문제를 함께 대비할 수 있도록 체계적으로 지도합니다.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>공지사항</h2>
-      <div class="notice">
-        <strong>[공지] 4월 수업 시간표 안내</strong>
-        <span>중등부/고등부 반별 시간표는 아래 반 안내에서 확인해주세요.</span>
-      </div>
-      <div class="notice">
-        <strong>[공지] 과제 제출 방법</strong>
-        <span>과제는 수업 전까지 제출해주세요. 사진 제출 가능.</span>
-      </div>
-      <div class="notice">
-        <strong>[공지] 질문 남기기</strong>
-        <span>아래 문의 버튼을 통해 질문을 남기면 확인 후 답변합니다.</span>
-      </div>
-    </section>
-
-    <section class="section" id="classes">
-      <h2>반 안내</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>초등반</h3>
-          <p>기초 문법 + 독해 훈련</p>
-          <p>화 / 목 3:30 - 5:30</p>
-        </div>
-        <div class="card">
-          <h3>중등부 A반</h3>
-          <p>기초 문법 + 독해 훈련</p>
-          <p>화 / 목 6:00 - 7:30</p>
-        </div>
-        <div class="card">
-          <h3>중등부 B반</h3>
-          <p>서술형 대비 + 내신 집중</p>
-          <p>화 / 목 7:40 - 9:10</p>
-        </div>
-        <div class="card">
-          <h3>고등부 1반</h3>
-          <p>고등 내신 + 모의고사 분석</p>
-          <p>월 / 수 7:00 - 9:00</p>
-        </div>
-        <div class="card">
-          <h3>고등부 2반</h3>
-          <p>수능형 독해 + 어법 훈련</p>
-          <p>금 7:00 - 10:00</p>
-        </div>
-        <div class="card">
-          <h3>고3 내신대비 + 수능대비반</h3>
-          <p>내신대비 + 독해 훈련</p>
-          <p>화 / 목 7:00 - 10:00</p>
+      <h2>홈페이지 메인</h2>
+      <p>이제 위 메뉴를 누르면 각각 다른 페이지로 이동합니다.</p>
+      <div class="board-list">
+        <div class="post">
+          <div class="meta">안내</div>
+          <strong>지금 해야 할 일</strong>
+          <div>GitHub 저장소에 아래 파일들을 각각 만들어 넣으면 됩니다.</div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>학원 특징</h2>
-      <div class="info-list">
-        <div class="info-item">학교별 시험 범위에 맞춘 내신 대비</div>
-        <div class="info-item">문장 해석, 문법 분석, 변형 문제 제작</div>
-        <div class="info-item">오답 관리 및 반복 학습 중심 지도</div>
-        <div class="info-item">학생 질문 확인 및 피드백 제공</div>
-      </div>
+      <h2>필요한 파일 목록</h2>
+      <p>저장소에 아래 파일들을 추가하면 메뉴 이동이 됩니다.</p>
+      <code>index.html
+notice.html
+middle.html
+high.html
+question.html
+files.html
+contact.html</code>
     </section>
 
-    <section class="section" id="contact">
-      <h2>문의하기</h2>
-      <p><strong>전화:</strong> 010-1234-5678</p>
-      <p><strong>카카오톡:</strong> 영어학원문의</p>
-      <p><strong>주소:</strong> 전주시 ○○동 ○○로 123</p>
-      <p>
-        <a class="btn btn-primary" href="https://forms.gle/ANKdYkJHCbBJuJLX6" target="_blank" rel="noopener noreferrer">
-          질문 남기기
-        </a>
-      </p>
+    <section class="section">
+      <h2>페이지별 내용 예시</h2>
+      <div class="board-list">
+        <div class="post">
+          <div class="meta">notice.html</div>
+          <strong>공지사항 전용 페이지</strong>
+          <div>수업 일정, 시험 일정, 과제 공지 등을 적습니다.</div>
+        </div>
+        <div class="post">
+          <div class="meta">middle.html</div>
+          <strong>중등부 게시판</strong>
+          <div>중등부 과제, 단어 시험 범위 등을 적습니다.</div>
+        </div>
+        <div class="post">
+          <div class="meta">high.html</div>
+          <strong>고등부 게시판</strong>
+          <div>고등부 자료, 모의고사, 어법 test 공지를 적습니다.</div>
+        </div>
+      </div>
     </section>
 
     <div class="footer">
-      © 2026 영어학원. All rights reserved.
+      © 2026 우리학원 영어교실. All rights reserved.
     </div>
   </div>
 </body>
