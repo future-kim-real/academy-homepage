@@ -31,7 +31,10 @@
       margin: 0 0 10px;
       font-size: 2rem;
     }
-    .hero p { margin: 0; opacity: 0.95; }
+    .hero p {
+      margin: 0;
+      opacity: 0.95;
+    }
     .nav {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -54,39 +57,35 @@
       padding: 22px;
       box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
     }
-    .section h2 { margin: 0 0 14px; font-size: 1.25rem; }
-    .board-list { display: grid; gap: 12px; }
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 1.25rem;
+    }
+    .board-list {
+      display: grid;
+      gap: 12px;
+    }
     .post {
       background: #fafbff;
       border: 1px solid #e8ebff;
       border-radius: 16px;
       padding: 16px;
     }
-    .post .meta { font-size: 0.9rem; color: #666; margin-bottom: 6px; }
-    .post strong { display: block; font-size: 1rem; margin-bottom: 4px; }
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-weight: 700;
-      background: #4f46e5;
-      color: white;
-      margin-top: 8px;
+    .post .meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .post strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
     }
     .footer {
       text-align: center;
       color: #666;
       padding: 24px 12px 40px;
       font-size: 0.95rem;
-    }
-    code {
-      display: block;
-      background: #111827;
-      color: #f9fafb;
-      padding: 14px;
-      border-radius: 14px;
-      overflow-x: auto;
-      font-size: 0.9rem;
     }
     @media (max-width: 640px) {
       .hero h1 { font-size: 1.7rem; }
@@ -98,7 +97,7 @@
   <div class="container">
     <section class="hero">
       <h1>우리학원 영어교실</h1>
-      <p>메뉴를 누르면 각 게시판 페이지로 이동하는 무료 학원 홈페이지입니다.</p>
+      <p>중등·고등 영어 내신과 수능형 독해를 함께 대비하는 영어교실입니다.</p>
     </section>
 
     <nav class="nav">
@@ -111,46 +110,62 @@
     </nav>
 
     <section class="section">
-      <h2>홈페이지 메인</h2>
-      <p>이제 위 메뉴를 누르면 각각 다른 페이지로 이동합니다.</p>
+      <h2>학원 소개</h2>
       <div class="board-list">
         <div class="post">
-          <div class="meta">안내</div>
-          <strong>지금 해야 할 일</strong>
-          <div>GitHub 저장소에 아래 파일들을 각각 만들어 넣으면 됩니다.</div>
+          <div class="meta">소개</div>
+          <strong>학교별 내신 대비와 수능형 독해를 함께 지도합니다.</strong>
+          <div>
+            우리 학원은 학교별 시험 범위에 맞춘 내신 대비와 수능형 독해 훈련을 함께 진행합니다.
+            문장 해석, 문법 분석, 서술형 대비, 어휘 학습을 체계적으로 지도합니다.
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>필요한 파일 목록</h2>
-      <p>저장소에 아래 파일들을 추가하면 메뉴 이동이 됩니다.</p>
-      <code>index.html
-notice.html
-middle.html
-high.html
-question.html
-files.html
-contact.html</code>
+      <h2>학원 특징</h2>
+      <div class="board-list">
+        <div class="post">
+          <div class="meta">특징</div>
+          <strong>학교별 내신 맞춤 수업</strong>
+          <div>학교별 시험 범위와 난이도에 맞춰 수업과 과제를 운영합니다.</div>
+        </div>
+        <div class="post">
+          <div class="meta">특징</div>
+          <strong>문장 해석과 문법 정확성 강화</strong>
+          <div>단순 암기가 아니라 해석과 문법 이해를 함께 잡는 수업을 진행합니다.</div>
+        </div>
+        <div class="post">
+          <div class="meta">특징</div>
+          <strong>서술형 · 어법 · 독해 대비</strong>
+          <div>내신과 모의고사에 필요한 핵심 유형을 반복적으로 훈련합니다.</div>
+        </div>
+        <div class="post">
+          <div class="meta">특징</div>
+          <strong>학생 질문 피드백 제공</strong>
+          <div>질문하기 메뉴를 통해 학생들이 궁금한 내용을 남기고 확인할 수 있습니다.</div>
+        </div>
+      </div>
     </section>
 
     <section class="section">
-      <h2>페이지별 내용 예시</h2>
+      <h2>이용 안내</h2>
       <div class="board-list">
         <div class="post">
-          <div class="meta">notice.html</div>
-          <strong>공지사항 전용 페이지</strong>
-          <div>수업 일정, 시험 일정, 과제 공지 등을 적습니다.</div>
+          <div class="meta">안내</div>
+          <strong>공지사항</strong>
+          <div>시험 일정, 과제, 보강 안내를 확인할 수 있습니다.</div>
         </div>
         <div class="post">
-          <div class="meta">middle.html</div>
-          <strong>중등부 게시판</strong>
-          <div>중등부 과제, 단어 시험 범위 등을 적습니다.</div>
+          <div class="meta">안내</div>
+          <strong>중등부 / 고등부 게시판</strong>
+          <div>반별 과제와 수업 관련 안내를 확인할 수 있습니다.</div>
         </div>
         <div class="post">
-          <div class="meta">high.html</div>
-          <strong>고등부 게시판</strong>
-          <div>고등부 자료, 모의고사, 어법 test 공지를 적습니다.</div>
+          <div class="meta">안내</div>
+          <strong>질문하기 / 자료실</strong>
+          <div>질문을 남기거나 필요한 학습 자료를 확인할 수 있습니다.</div>
         </div>
       </div>
     </section>
